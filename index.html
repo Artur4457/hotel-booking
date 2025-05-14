@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн Бронирование Отелей</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    .hotels {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .hotel {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .hotel img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .hotel-content {
+      padding: 15px;
+    }
+    .hotel-content h3 {
+      margin-bottom: 10px;
+    }
+    .hotel-content p {
+      margin-bottom: 10px;
+    }
+    .hotel-content button {
+      background: #0077cc;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hotel-content button:hover {
+      background: #005fa3;
+    }
+    .hotel-page, .cabinet, .auth {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+    .hotel-page img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .hotel-page h2 {
+      margin-bottom: 10px;
+    }
+    .hotel-page p {
+      margin-bottom: 15px;
+    }
+    .hotel-page button,
+    .auth button {
+      background: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hotel-page button:hover,
+    .auth button:hover {
+      background: #005fa3;
+    }
+    .cabinet h2 {
+      margin-bottom: 15px;
+    }
+    .cabinet ul {
+      list-style: none;
+    }
+    .cabinet ul li {
+      background: #eef;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .auth {
+      margin-bottom: 40px;
+    }
+    .auth h2 {
+      margin-bottom: 10px;
+    }
+    .auth label {
+      display: block;
+      margin-top: 10px;
+    }
+    .auth input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Бронирование Отелей</h1>
+    <p>Найди идеальный отель для своего отдыха</p>
+  </header>
+  <div class="container">
+    <h2>Главная</h2>
+    <div class="hotels">
+      <div class="hotel">
+        <img src="https://source.unsplash.com/featured/?hotel,resort" alt="Hotel Image">
+        <div class="hotel-content">
+          <h3>Blue Lagoon Resort</h3>
+          <p>Комфортабельный курорт с видом на океан. Wi-Fi, бассейн, питание включено.</p>
+          <button>Забронировать</button>
+        </div>
+      </div>
+      <div class="hotel">
+        <img src="https://source.unsplash.com/featured/?luxury,hotel" alt="Hotel Image">
+        <div class="hotel-content">
+          <h3>Golden Palace</h3>
+          <p>Роскошный отель в центре города. СПА, ресторан, трансфер в аэропорт.</p>
+          <button>Забронировать</button>
+        </div>
+      </div>
+      <div class="hotel">
+        <img src="https://source.unsplash.com/featured/?mountain,hotel" alt="Hotel Image">
+        <div class="hotel-content">
+          <h3>Mountain Escape</h3>
+          <p>Отдых в горах для всей семьи. Катание на лыжах, уютные номера, баня.</p>
+          <button>Забронировать</button>
+        </div>
+      </div>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Страница отеля: Blue Lagoon Resort</h2>
+    <div class="hotel-page">
+      <img src="https://source.unsplash.com/featured/?resort,ocean" alt="Blue Lagoon Resort">
+      <h2>Blue Lagoon Resort</h2>
+      <p>Расположен на живописном берегу. Современные номера с видом на океан, бассейн, бесплатный Wi-Fi, ресторан с морепродуктами.</p>
+      <p><strong>Адрес:</strong> Ocean Drive 15, Miami</p>
+      <p><strong>Цена:</strong> от 120$/ночь</p>
+      <button>Забронировать этот отель</button>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Личный кабинет</h2>
+    <div class="cabinet">
+      <h2>Добро пожаловать, Максим!</h2>
+      <p>Ваши бронирования:</p>
+      <ul>
+        <li>Blue Lagoon Resort – 21.06.2025 – 25.06.2025</li>
+        <li>Golden Palace – 15.07.2025 – 18.07.2025</li>
+      </ul>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Вход</h2>
+    <div class="auth">
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Введите email">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" placeholder="Введите пароль">
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+
+    <h2>Регистрация</h2>
+    <div class="auth">
+      <form>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" placeholder="Ваше имя">
+        <label for="new-email">Email:</label>
+        <input type="email" id="new-email" placeholder="Введите email">
+        <label for="new-password">Пароль:</label>
+        <input type="password" id="new-password" placeholder="Создайте пароль">
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Онлайн Бронирование Отелей. Все права защищены.
+  </footer>
+</body>
+</html>
